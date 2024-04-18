@@ -50,7 +50,7 @@ $result = $conexion->query($query);
                     
                     <td>
                         <a href="config/pedidos/update/update_index.php?IDProducto=<?php echo $row ['IDPedido']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>
-                        
+                        <a href ="config/pedidos/eliminar/eliminar_pedidos.php?IDPedido=<?php echo $row ['IDPedido']; ?>" class = "btn btn-danger">eliminar</a>
                     </td>
             </tr>
             <?php }?>
