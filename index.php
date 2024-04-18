@@ -48,7 +48,7 @@ $result = $conexion->query($query);
                     <td><?php echo $row ['categoria']; ?></td>
                     
                     <td>
-                        <a href="config/productos/update_index.php?IDProducto=<?php echo $row ['IDProducto']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>
+                        <a href="config/productos/update/update_index.php?IDProducto=<?php echo $row ['IDProducto']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>
                         
                     </td>
             </tr>
