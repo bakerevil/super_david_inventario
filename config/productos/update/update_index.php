@@ -3,6 +3,8 @@
     $IDProducto = $_GET['IDProducto'];
     $query = "SELECT * FROM producto";
     $result = $conexion->query($query);
+
+   
     ?>
 <html lang="en">
 
@@ -16,7 +18,7 @@
 <body>
     <form action="editar_index.php" method="POST">
     
-      <input type="hidden" id="inputIDProducto" class="form-control" placeholder="IDProductor" name="IDProducto">
+      
       <label for="inputnombre" class="sr-only">nombre</label>
       <input type="nombre" id="inputnombre" class="form-control" placeholder="nombre" name="nombre">
       <label for="inputprecio" class="sr-only">precio</label>
@@ -26,7 +28,7 @@
       <label for="inputcategoria" class="sr-only">categoria</label>
       <input type="categoria" id="inputcategoria" class="form-control" placeholder="categoria" name="categoria">
       <div class="col-12">
-                    <input type="hidden" name="IDProducto" value="<?php echo $IDProducto; ?>">
+                    <input type="imputIDProducto" name="IDProducto" value="<?php echo $IDProducto; ?>">
                     <button type="submit" class="btn btn-success">guardar</button>
                 </div>
     </form>
