@@ -51,8 +51,8 @@ $result = $conexion->query($query);
                     <td><?php echo $row ['producto']; ?></td>
                     
                     <td>
-                        <a href="config/proveedores/update/update_index.php?IDProveedor=<?php echo $row ['IDProveedor']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>
-                        
+                        <a href="config/proveedores/update/update_index.php?IDProveedor=<?php echo $row ['IDProveedor']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a> 
+                        <a href ="config/proveedores/eliminar/eliminar_proveedor.php?IDProveedor=<?php echo $row ['IDProveedor']; ?>" class = "btn btn-danger">eliminar</a>
                     </td>
             </tr>
             <?php }?>
