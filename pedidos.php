@@ -49,7 +49,7 @@ $result = $conexion->query($query);
                     <td><?php echo $row ['codigo']; ?></td>
                     
                     <td>
-                        <a href="config/pedidos/update/update_index.php?IDProducto=<?php echo $row ['IDPedido']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>
+                        <a href="config/pedidos/update/update_index.php?IDPedido=<?php echo $row ['IDPedido']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>
                         
                     </td>
             </tr>

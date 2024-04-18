@@ -1,7 +1,7 @@
 <?php 
     require_once('../../consulta.php');
-    $IDProducto = $_GET['IDProducto'];
-    $query = "SELECT * FROM producto";
+    $IDCliente = $_GET['IDCliente'];
+    $query = "SELECT * FROM clientes";
     $result = $conexion->query($query);
 
    
@@ -14,21 +14,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Control de un inventario</title>
 </head>
-<a href="../../../index.php"><button>Regresar</button></a>
+<a href="../../../clientes.php"><button>Regresar</button></a>
 <body>
     <form action="editar_index.php" method="POST">
     
       
       <label for="inputnombre" class="sr-only">nombre</label>
       <input type="nombre" id="inputnombre" class="form-control" placeholder="nombre" name="nombre">
-      <label for="inputprecio" class="sr-only">precio</label>
-      <input type="precio" id="inputprecio" class="form-control" placeholder="precio" name="precio">
-      <label for="inputstock" class="sr-only">stock</label>
-      <input type="stock" id="inputstock" class="form-control" placeholder="stock" name="stock">
-      <label for="inputcategoria" class="sr-only">categoria</label>
-      <input type="categoria" id="inputcategoria" class="form-control" placeholder="categoria" name="categoria">
+      <label for="inputprecio" class="sr-only">email</label>
+      <input type="email" id="inputprecio" class="form-control" placeholder="email" name="email">
+      <label for="inputstock" class="sr-only">producto</label>
+      <input type="producto" id="inputstock" class="form-control" placeholder="producto" name="producto">
+      <label for="inputcategoria" class="sr-only">pedido</label>
+      <input type="pedido" id="inputcategoria" class="form-control" placeholder="pedido" name="pedido">
       <div class="col-12">
-                    <input type="hidden" name="IDProducto" value="<?php echo $IDProducto; ?>">
+                    <input type="text" name="IDCliente" value="<?php echo $IDCliente; ?>">
                     <button type="submit" class="btn btn-success">guardar</button>
                 </div>
     </form>

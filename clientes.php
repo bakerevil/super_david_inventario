@@ -48,7 +48,7 @@ $result = $conexion->query($query);
                 <td><?php echo $row ['producto']; ?></td>
                 <td><?php echo $row ['pedido']; ?></td>
                 <td>
-                    <a id="btn" href="config/cliente/update/update_index.php?IDCliente=<?php echo $row ['IDCliente']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>   
+                    <a id="btn" href="config/clientes/update/update_index.php?IDCliente=<?php echo $row ['IDCliente']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>   
                 </td>
             </tr>
         <?php }?>
