@@ -30,7 +30,7 @@
       <label for="inputcategoria" class="sr-only">producto</label>
       <input type="producto" id="inputcategoria" class="form-control" placeholder="producto" name="producto">
       <div class="col-12">
-                    <input type="text" name="IDProveedor" value="<?php echo $IDProveedor; ?>">
+                    <input type="hidden" name="IDProveedor" value="<?php echo $IDProveedor; ?>">
                     <button type="submit" class="btn btn-success">guardar</button>
                 </div>
     </form>

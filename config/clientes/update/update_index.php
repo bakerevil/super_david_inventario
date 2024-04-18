@@ -28,7 +28,7 @@
       <label for="inputcategoria" class="sr-only">pedido</label>
       <input type="pedido" id="inputcategoria" class="form-control" placeholder="pedido" name="pedido">
       <div class="col-12">
-                    <input type="text" name="IDCliente" value="<?php echo $IDCliente; ?>">
+                    <input type="hidden" name="IDCliente" value="<?php echo $IDCliente; ?>">
                     <button type="submit" class="btn btn-success">guardar</button>
                 </div>
     </form>
