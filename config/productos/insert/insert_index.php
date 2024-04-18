@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Control de un inventario</title>
 </head>
-<a href="../../../index.php"><button>Regresar</button></a>
+<a href="../../../productos.php"><button>Regresar</button></a>
 <body>
     <form action="insert.php" method="POST">
       <label for="inputnombre" class="sr-only">nombre</label>
