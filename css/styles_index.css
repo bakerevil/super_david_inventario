@@ -1,10 +1,84 @@
-.head, .head h1{
+
+.head, .head h1, .head h2{
     display: flex;
-    margin-right: 20px;
+    margin-right: 5px;
+    align-items: center;
+}
+.head{
+    background-color: rgb(40, 31, 160);
+    width: 100%;
+    justify-content: center;
+    padding-top: 5px;
+}
+.head a{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    text-decoration: none;
+    color: rgb(89, 78, 252);
+    margin:  0 5px 0 5px;
+}
+.head a#primary{
+    background-color: white;
+    border: 0;
+}
+.head a#comp{
+    border-bottom: 1px solid black;
+
+}
+.head a :hover{
+    color: rgb(173, 170, 219);
+}
+h2#texto{
+    display: flex;
+    justify-content: center;
 }
 thead{
-    background-color: rgb(251, 255, 0);
+    background-color: rgb(89, 78, 252);
 }
 th{
     padding: 0 50px 0 50px;
+}
+tr, tbody{
+    text-align: center;
+}
+tbody td{
+    border: 1px solid;
+}
+table{
+    width: 100%;
+}
+td#btn{
+    background-color: rgb(89, 78, 252);
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+.footer h2{
+    margin-right: 300px;
+}
+.footer div{
+    margin-top: 15px;
+    margin-left: 300px;
+}
+.footer div i{
+    padding: 10px;
+    margin: 20px 10px;
+}
+.con{
+    display: flex;
+   justify-content: center;
+}
+.con h4{
+    padding: 0 10px;
+}
+.con i{
+    margin: 20px 10px;
+}
+.cr h4{
+    text-align: center;
+    opacity: 30%;
+    margin-top: 0
 }

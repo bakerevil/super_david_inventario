@@ -20,13 +20,12 @@ $result = $conexion->query($query);
             <a href="index.php"><h1>productos</h1></a>
             <a href="proveedores.php"><h1>proveedores</h1></a>
             <a href="pedidos.php"><h1>pedidos</h1></a>
-            <a href="clientes.php"><h1>clientes</h1></a>
+            <a id="primary" href="clientes.php"><h1>clientes</h1></a>
+            <a id="comp" href="config/clientes/insert/insert_clientes.php"><h2>Agregar cliente</h2></a>
         </div>
     </header>
-    <a href="config/clientes/insert/insert_clientes.php"><button>Agregar productos</button></a>
     <br>
-    <h2>Lista de los clientes</h2>
-    <br>
+    <h2 id="texto">Lista de los clientes</h2>
     </header>
     <table>
         <thead>
@@ -40,23 +39,37 @@ $result = $conexion->query($query);
             </tr>
         </thead>
         <?php
-                 while($row = $result->fetch_assoc ()){
-                ?>
+            while($row = $result->fetch_assoc ()){
+        ?>
             <tr>
-            
-                    <td><?php echo $row ['IDCliente']; ?></td>
-                    <td><?php echo $row ['nombre']; ?></td>
-                    <td><?php echo $row ['email']; ?></td>
-                    <td><?php echo $row ['producto']; ?></td>
-                    <td><?php echo $row ['pedido']; ?></td>
-                    
-                    <td>
-                        <a href="config/cliente/update/update_index.php?IDCliente=<?php echo $row ['IDCliente']; ?>" class="btn btn-warning">editar</a>
-                        
-                    </td>
+                <td><?php echo $row ['IDCliente']; ?></td>
+                <td><?php echo $row ['nombre']; ?></td>
+                <td><?php echo $row ['email']; ?></td>
+                <td><?php echo $row ['producto']; ?></td>
+                <td><?php echo $row ['pedido']; ?></td>
+                <td>
+                    <a id="btn" href="config/cliente/update/update_index.php?IDCliente=<?php echo $row ['IDCliente']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>   
+                </td>
             </tr>
-           
-            <?php }?>
+        <?php }?>
     </table>
+    <footer>
+        <hr>
+        <div class="footer">
+            <h2>Super David</h2>
+            <div>
+                <i>IN</i>
+                <i>TW</i>
+                <i>BK</i>
+            </div>
+        </div>
+        <div class="con">
+            <h4>Super_david1@gmail.com</h4>
+            <h4>+91 91813 23 2309</h4>
+        </div>
+        <div class="cr">
+            <h4>Copyright © 2024 Super David.</h4>
+        </div>
+    </footer>
 </body>
 </html>
