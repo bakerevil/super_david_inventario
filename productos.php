@@ -1,10 +1,9 @@
 <?php
 require_once('config/consulta.php');
-$query = "SELECT * FROM proveedor";
+$query = "SELECT * FROM producto";
 $result = $conexion->query($query);
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,42 +16,41 @@ $result = $conexion->query($query);
 <body>
     <header>
         <div class="head">
-            <a href="productos.php"><h1>productos</h1></a>
-            <a id="primary" href="proveedores.php"><h1>proveedores</h1></a>
+            <a id="primary" href="productos.php"><h1>productos</h1></a>
+            <a href="proveedores.php"><h1>proveedores</h1></a>
             <a href="pedidos.php"><h1>pedidos</h1></a>
             <a href="clientes.php"><h1>clientes</h1></a>
-            <a id="comp" href="config/proveedores/insert/insert_proveedores.php"><h2>Agregar proveedor</h2></a>
+            <a id="comp" href="config/productos/insert/insert_index.php"><h2>Agregar producto</h2></a>
         </div>
     </header>
     <br>
-    <h2 id="texto">Lista de los proveedores</h2>
+    <h2 id="texto">Lista de productos</h2>
     <table>
         <thead>
             <tr>
                 <th>id</th>
-                <th>nombre</th>
-                <th>direccion</th>
-                <th>telefono</th>
-                <th>rfc</th>
-                <th>producto</th>
-                <th style="text-align: center;">editar</th>
-            </tr>
+                <th>descripcion</th>
+                <th>cantidad</th>
+                <th>proovedor</th>
+                <th>precio</th>
+                <th colspan="2" style="text-align: center;">editables</th>
+                </tr>
         </thead>
         <?php
                  while($row = $result->fetch_assoc ()){
                 ?>
             <tr>
             
-                    <td><?php echo $row ['IDProveedor']; ?></td>
+                    <td><?php echo $row ['IDProducto']; ?></td>
                     <td><?php echo $row ['nombre']; ?></td>
-                    <td><?php echo $row ['direccion']; ?></td>
-                    <td><?php echo $row ['telefono']; ?></td>
-                    <td><?php echo $row ['rfc']; ?></td>
-                    <td><?php echo $row ['producto']; ?></td>
+                    <td><?php echo $row ['precio']; ?></td>
+                    <td><?php echo $row ['stock']; ?></td>
+                    <td><?php echo $row ['categoria']; ?></td>
                     
                     <td>
-                        <a href="config/proveedores/update/update_index.php?IDProveedor=<?php echo $row ['IDProveedor']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a> 
-                        <a href ="config/proveedores/eliminar/eliminar_proveedor.php?IDProveedor=<?php echo $row ['IDProveedor']; ?>" class = "btn btn-danger">eliminar</a>
+                        <a href="config/productos/update/update_index.php?IDProducto=<?php echo $row ['IDProducto']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>
+                        <a href ="config/productos/eliminar/eliminar.php?IDProducto=<?php echo $row ['IDProducto']; ?>" class = "btn btn-danger">eliminar</a>
+                        
                     </td>
             </tr>
             <?php }?>

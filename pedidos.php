@@ -17,7 +17,7 @@ $result = $conexion->query($query);
 <body>
     <header>
         <div class="head">
-            <a href="index.php"><h1>productos</h1></a>
+            <a href="productos.php"><h1>productos</h1></a>
             <a href="proveedores.php"><h1>proveedores</h1></a>
             <a id="primary" href="pedidos.php"><h1>pedidos</h1></a>
             <a href="clientes.php"><h1>clientes</h1></a>
