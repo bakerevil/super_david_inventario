@@ -19,14 +19,13 @@ $result = $conexion->query($query);
         <div class="head">
             <a href="index.php"><h1>productos</h1></a>
             <a href="proveedores.php"><h1>proveedores</h1></a>
-            <a href="pedidos.php"><h1>pedidos</h1></a>
+            <a id="primary" href="pedidos.php"><h1>pedidos</h1></a>
             <a href="clientes.php"><h1>clientes</h1></a>
+            <a id="comp" href="config/pedidos/insert/insert_pedidos.php"><h2>Agregar pedido</h2></a>
         </div>
     </header>
-    <a href="config/pedidos/insert/insert_pedidos.php"><button>Agregar productos</button></a>
     <br>
-    <h2>Lista de los pedidos</h2>
-    <br>
+    <h2 id="texto">Lista de los pedidos</h2>
     <table>
         <thead>
             <tr>
@@ -50,12 +49,30 @@ $result = $conexion->query($query);
                     <td><?php echo $row ['codigo']; ?></td>
                     
                     <td>
-                        <a href="config/pedidos/update/update_index.php?IDProducto=<?php echo $row ['IDPedido']; ?>" class="btn btn-warning">editar</a>
+                        <a href="config/pedidos/update/update_index.php?IDProducto=<?php echo $row ['IDPedido']; ?>" class="btn btn-warning" style= background-color:rgb(89,78,252);>editar</a>
                         
                     </td>
             </tr>
             <?php }?>
 
     </table>
+    <footer>
+        <hr>
+        <div class="footer">
+            <h2>Super David</h2>
+            <div>
+                <i>IN</i>
+                <i>TW</i>
+                <i>BK</i>
+            </div>
+        </div>
+        <div class="con">
+            <h4>Super_david1@gmail.com</h4>
+            <h4>+91 91813 23 2309</h4>
+        </div>
+        <div class="cr">
+            <h4>Copyright © 2024 Super David.</h4>
+        </div>
+    </footer>
 </body>
 </html>
